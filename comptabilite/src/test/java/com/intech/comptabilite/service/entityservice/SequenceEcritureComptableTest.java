@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.intech.comptabilite.model.SequenceEcritureComptable;
+import com.intech.comptabilite.service.exceptions.NotFoundException;
 
 @SpringBootTest
 class SequenceEcritureComptableTest {
@@ -16,21 +17,8 @@ class SequenceEcritureComptableTest {
 	@Autowired
 	private SequenceEcritureComptable sequenceEcritureComptable;
 	
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
-	
-	@Test
-	public void testGetDernierValeurByCodeAndAnnee() {
-		ArrayList<SequenceEcritureComptable> sequenceEcriture = new ArrayList<SequenceEcritureComptable>();
-		
-		SequenceEcritureComptable sequence = new SequenceEcritureComptable();
-		
-		sequenceEcriture.add(sequence);
+	@Autowired
+	SequenceEcritureComptableService sequenceEcritureComptableService;
 
-		
-
-	}
 
 }
